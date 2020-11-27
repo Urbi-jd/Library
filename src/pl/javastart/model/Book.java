@@ -71,13 +71,14 @@ public class Book {
     }
 
     public void printInfo() {
-        String resoult =   "title: " + title +
+        String resoult = "title: " + title +
                 ", author: " + author +
                 ", releaseDate: " + releaseDate +
                 ", pages: " + pages +
-                ", publisher: " + publisher +
-                ", isbn: " + isbn
-                ;
-         System.out.println(resoult);
+                ", publisher: " + publisher;
+        if (isbn != null) {
+            resoult += ", isbn: " + isbn;
+        }
+        System.out.println(resoult);
     }
 }
